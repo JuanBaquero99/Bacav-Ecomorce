@@ -5,6 +5,7 @@ import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import Signin from '../Signin'
+import Navbar from '../../Components/Navbar/index'
 import './App.css'
 
 const AppRoutes = () => { //Array function para retornar el 'routes'
@@ -26,6 +27,7 @@ const App = () => { //Aqui estariamos llamando al AppRoutes donde se encuentra l
   return (
     <BrowserRouter>
       <AppRoutes />
+      <Navbar />
     </BrowserRouter>
 
   )

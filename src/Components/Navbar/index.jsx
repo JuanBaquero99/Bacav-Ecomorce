@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <NavLink to='/bacav'>
+        <nav className='flex justify-between items-center fixed z-10 w-full py-5 px-8 text-sm font-light'>
+            <ul className='flex items-center gap-3'>
+                <li className='font-semibold text-lg'>
+                    <NavLink to='/'>
                         Bacav
                     </NavLink>
                 </li>
@@ -20,29 +20,16 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/electronics'>
-                        Electronics
-                    </NavLink>
-                <li>
-                    <NavLink to='/furnitures'>
-                        Furnitures
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/toys'>
-                        Toys
-                    </NavLink>
-                </li>
-                <li>
                     <NavLink to='/others'>
                         Others
                     </NavLink>
                 </li>
-                </li>
             </ul>
-            <ul>
+            <ul className='flex items-center gap-3'>
                 <li>
-                    feid@example.com
+                    <NavLink to='/'>
+                        feid@example.com
+                    </NavLink>
                 </li>
                 <li>
                     <NavLink to='/my-orders'>
@@ -58,21 +45,13 @@ const Navbar = () => {
                     <NavLink to='/sign-in'>
                         Sign In
                     </NavLink>
-                    <li>
+                </li>
+                <li>
                     🛒
-                    </li>
-                <li>
-                    <NavLink to='/toys'>
-                        Toys
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/others'>
-                        Others
-                    </NavLink>
-                </li>
                 </li>
             </ul>
         </nav>
     )
 }
+
+export default Navbar
