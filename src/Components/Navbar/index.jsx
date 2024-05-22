@@ -1,18 +1,16 @@
-import { NavLink } from 'react-router-dom'
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { ShoppingCartContext } from '../../Context';
 
 const Navbar = () => {
-    const activeStyle = "underline"
-    //Objeto para darle estilos y dirección al texto al nuevo elemento
+    const { count } = useContext(ShoppingCartContext); // Obtenemos el count del contexto
+    const activeStyle = "underline underline-offset-4";
 
     return (
-        <nav className='flex justify-between items-center fixed z-10 w-full py-5 px-8 text-sm font-light'>
+        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
             <ul className='flex items-center gap-3'>
                 <li className='font-semibold text-lg'>
-                    <NavLink //Classname para los estilos y comparativa para determinar si el vinculo esta activo o no, con respectiva redirección
-                        to='/'
-                        className={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                        }>
+                    <NavLink to='/'>
                         Bacav
                     </NavLink>
                 </li>
@@ -35,7 +33,8 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/others'
+                    <NavLink
+                        to='/others'
                         className={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>
@@ -44,7 +43,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <ul className='flex items-center gap-3'>
-                <li>
+                <li className='text-black/60'>
                     <NavLink
                         to='/'
                         className={({ isActive }) =>
@@ -81,11 +80,11 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    🛒
+                    🛒 {count}
                 </li>
             </ul>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

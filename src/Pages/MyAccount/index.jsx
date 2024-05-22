@@ -1,9 +1,11 @@
+import Layout from "../../Components/Layout";
+
 function MyAccount() {
 
     return (
-      <h1 className="bg-zinc-700">
+      <Layout>
         MyAccount
-      </h1>
+      </Layout>
     )
   }
   

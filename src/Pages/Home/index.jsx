@@ -1,10 +1,15 @@
-function Home() {
+import Layout from "../../Components/Layout";
+import Card from "../../Components/Card";
+import ProductDetail from "../../Components/ProductDetail";
 
-  return (
-    <h1 className="bg-zinc-700">
-      Home
-    </h1>
-  )
+function Home() {
+    return (
+        <Layout>
+            Home
+            <Card />
+            <ProductDetail />
+        </Layout>
+    );
 }
 
-export default Home
+export default Home;

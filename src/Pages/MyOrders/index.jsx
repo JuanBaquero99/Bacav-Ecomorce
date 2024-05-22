@@ -1,9 +1,11 @@
+import Layout from "../../Components/Layout";
+
 function MyOrders() {
 
     return (
-      <h1 className="bg-zinc-700">
+      <Layout>
         MyOrders
-      </h1>
+      </Layout>
     )
   }
   

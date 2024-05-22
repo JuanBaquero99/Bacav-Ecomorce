@@ -1,9 +1,11 @@
+import Layout from "../../Components/Layout";
+
 function NotFound() {
 
     return (
-      <h1 className="bg-zinc-700">
+      <Layout>
         NotFound
-      </h1>
+      </Layout>
     )
   }
   
