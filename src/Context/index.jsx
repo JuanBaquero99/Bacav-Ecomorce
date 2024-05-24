@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
 export const ShoppingCartContext = createContext();
@@ -9,6 +9,7 @@ export const ShoppingCartProvider = ({ children }) => {
     const [productToShow, setProductToShow] = useState({});
     const [cartProducts, setCartProducts] = useState([]);
     const [isCheckoutSideMenuOpen, setIsCheckoutSideMenuOpen] = useState(false);
+    const [order, setOrder] = useState([]);
 
     const openProductDetail = () => setIsProductDetailOpen(true);
     const closeProductDetail = () => setIsProductDetailOpen(false);
@@ -44,7 +45,9 @@ export const ShoppingCartProvider = ({ children }) => {
             isCheckoutSideMenuOpen,
             openCheckOutSideMenu,
             closeCheckOutSideMenu,
-            addToCart
+            addToCart,
+            order,
+            setOrder
         }}>
             {children}
         </ShoppingCartContext.Provider>
@@ -53,6 +56,7 @@ export const ShoppingCartProvider = ({ children }) => {
 
 ShoppingCartProvider.propTypes = {
     children: PropTypes.node.isRequired,
+    order: PropTypes.array.isRequired,
 };
 
 export default ShoppingCartProvider;
