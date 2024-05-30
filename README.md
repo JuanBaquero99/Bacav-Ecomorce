@@ -4,7 +4,7 @@ Este proyecto es una página de comercio electrónico desarrollada para la marca
 
 🛠️ Tecnologías Utilizadas:
 
-   JavaSCript: Para la implementación de la lógica del backend.
+JavaScript: Para la implementación de la lógica del backend.
 ⚛️ React: Para la creación de una interfaz de usuario interactiva y dinámica.
 ⚡ Vite: Para la construcción rápida y eficiente del proyecto.
 🎨 Tailwind CSS: Para un diseño moderno y responsivo.
