@@ -1,8 +1,15 @@
-# React + Vite
+##Repositorio de E-commerce para la Marca de Ropa Interior Masculina Bacav
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una página de comercio electrónico desarrollada para la marca de ropa interior masculina Bacav. La aplicación está construida utilizando el lenguaje Python para la lógica del backend, React para la interfaz de usuario, Vite como herramienta de construcción y Tailwind CSS para el diseño y estilo visual.
 
-Currently, two official plugins are available:
+Tecnologías Utilizadas:
+Python: Para la implementación de la lógica del backend.
+React: Para la creación de una interfaz de usuario interactiva y dinámica.
+Vite: Para la construcción rápida y eficiente del proyecto.
+Tailwind CSS: Para un diseño moderno y responsivo.
+React + Vite
+Esta plantilla proporciona una configuración mínima para utilizar React en Vite con Hot Module Replacement (HMR) y algunas reglas de ESLint.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Actualmente, hay dos plugins oficiales disponibles:
+
+@vitejs/plugin-react: Utiliza Babel para Fast Refresh.
