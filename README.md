@@ -1,4 +1,5 @@
-🛒 Repositorio de E-commerce para la Marca de Ropa Interior Masculina Bacav
+🛒 Repositorio de E-commerce para la Marca de Ropa Interior Masculina Bacav:
+
 Este proyecto es una página de comercio electrónico desarrollada para la marca de ropa interior masculina Bacav. La aplicación está construida utilizando el lenguaje Python para la lógica del backend, React para la interfaz de usuario, Vite como herramienta de construcción y Tailwind CSS para el diseño y estilo visual.
 
 🛠️ Tecnologías Utilizadas:
