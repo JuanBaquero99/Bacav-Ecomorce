@@ -24,17 +24,15 @@ const AppRoutes = () => { //Array function para retornar el 'routes'
     return routes
 }
 
-const App = () => { //Aqui estariamos llamando al AppRoutes donde se encuentra la ruta home
+const App = () => {
   return (
-    <ShoppingCartProvider>
-    <BrowserRouter>
-      <AppRoutes />
-      <Navbar />
-    </BrowserRouter>
-    </ShoppingCartProvider>
-
-
-  )
-}
+      <ShoppingCartProvider>
+          <BrowserRouter>
+              <AppRoutes />
+              <Navbar />
+          </BrowserRouter>
+      </ShoppingCartProvider>
+  );
+};
 
 export default App

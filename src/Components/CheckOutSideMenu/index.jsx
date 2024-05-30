@@ -1,44 +1,41 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import OrderCard from '../OrderCard';
 import { ShoppingCartContext } from '../../Context';
 import { totalPrice } from '../../utils';
 
 const CheckoutSideMenu = () => {
     const context = useContext(ShoppingCartContext);
-    const { isCheckoutSideMenuOpen, closeCheckOutSideMenu } = context;
+    const { isCheckoutSideMenuOpen, closeCheckOutSideMenu, cartProducts } = context;
 
     const handleDelete = (id) => {
         const filteredProducts = context.cartProducts.filter(product => product.id !== id);
         context.setCartProducts(filteredProducts);
-        // Reducir el contador
         context.setCount(context.count - 1);
-    }
+    };
 
     const handleCheckout = () => {
         const orderToAdd = {
-            date: '01.01.2024', // Agregar coma aquí
+            date: '01.01.2024',
             products: context.cartProducts,
-            totalProducts: context.cartProducts.length, // Corregir "length"
+            totalProducts: context.cartProducts.length,
             totalPrice: totalPrice(context.cartProducts)
         };
         context.setOrder([...context.order, orderToAdd]);
-        context.setCartProducts([]); // Limpiar el carrito después del checkout
-        closeCheckOutSideMenu(); // Cerrar el menú de checkout después del checkout
-    }
+        context.setCartProducts([]);
+        closeCheckOutSideMenu();
+    };
 
     return (
-        <aside 
-            className={`${isCheckoutSideMenuOpen ? 'flex' : 'hidden'} product-detail flex flex-col fixed right-0 border border-black bg-white`}
-        >
+        <aside className={`${isCheckoutSideMenuOpen ? 'flex' : 'hidden'} product-detail flex flex-col fixed right-0 border border-black bg-white`}>
             <div className='flex justify-between items-center p-6'>
                 <h2 className='font-medium text-xl'>Mi Orden</h2>
-                <button onClick={closeCheckOutSideMenu}>x</button> {/* Corregir el nombre de la función */}
+                <button onClick={closeCheckOutSideMenu}>x</button>
             </div>
             <div className="overflow-y-auto">
-                {context.cartProducts.length > 0 ? (
+                {cartProducts.length > 0 ? (
                     <ul>
-                        {context.cartProducts.map(product => (
+                        {cartProducts.map(product => (
                             <li key={product.id}>
                                 <OrderCard
                                     id={product.id}
@@ -58,12 +55,13 @@ const CheckoutSideMenu = () => {
             <div className='px-6'>
                 <p className='flex justify-between items-center'>
                     <span className='font-light'>Total</span>
-                    <span className='font-light'>${totalPrice(context.cartProducts)}</span>
+                    <span className='font-light'>${totalPrice(cartProducts)}</span>
                 </p>
-                <link to='/my-orders/last'>                
-                <button onClick={handleCheckout}> {/* Cambiar el manejador de eventos */}
-                    Checkout
-                </button></link>
+                <Link to='/my-orders/last'>
+                    <button onClick={handleCheckout}>
+                        Checkout
+                    </button>
+                </Link>
             </div>
         </aside>
     );

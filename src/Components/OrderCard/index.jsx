@@ -9,10 +9,10 @@ const OrderCard = ({ id, title, imageUrl, price, handleDelete }) => {
             </div>
             <div className="flex items-center gap-2">
                 <p className="text-lg font-light-medium">{price}</p>
-                <button onClick={() => handleDelete(id)}>X</button> {/* Botón para eliminar */}
+                <button onClick={() => handleDelete(id)}>X</button>
             </div>
         </div>
     );
-}
+};
 
 export default OrderCard;

@@ -56,7 +56,6 @@ export const ShoppingCartProvider = ({ children }) => {
 
 ShoppingCartProvider.propTypes = {
     children: PropTypes.node.isRequired,
-    order: PropTypes.array.isRequired,
 };
 
 export default ShoppingCartProvider;
